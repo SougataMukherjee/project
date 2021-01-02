@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h1{font-size: 100px;font-weight: 300; line-height: 1.4; letter-spacing: 0.5rem; text-align: center;margin-top: 10px;text-decoration: underline tomato;font-family:cursive;color:tomato;}
+
+ul{float:right;
+list-style-type:none;
+}
+ul li
+{
+display:inline-block;
+}
+ul li a{
+text-decoration:none;
+color:red;
+padding:5px 20px;
+border:1px solid #fff;
+transition:0.6s; ease;
+}
+ul li a:hover{
+background-color:#fff;
+color:black;
+}
+ul li.active a{
+background-color:#fff;
+color:#ooo;
+}
+.accordion {
+  
+  color:red;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-color: tomato;
+border-left-style:hidden;
+border-right-style:hidden;
+border-width:5px;
+  text-align: left;
+  outline: none;
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color:yellow; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-image:linear-gradient(45deg,yellow,red 20%,blue);
+color:white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a href="portfolio.html">Home</a></li>
+<li><a href="slider.html">Service </a></li>
+<li><a href="imagegallery.html">Gallery</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+
+<h1>About Me</h1>
+<marquee bgcolor=tomato  scrollamount=8><font color=white><p style="font-family: cursive;">Myself <mark>Sougata Mukherjee</mark>.i am passionate about my work.I will ready to do work in any time when there will be need and urgent.I believe in Creating value and then Sharing Value.Thanks</p></font></marquee>
+
+<button class="accordion">(1)Why You Choose me...</button>
+<div class="panel">
+  <p><ul> Fast Response Time on Revisions and Unlimited Revisions<br/>
+Unique and eye-catching design<br/>
+110% Customer Satisfaction<br/>
+100% Money Back Guaranteed
+Very Fast Delivery<br/>Friendly and 24/7 Support<br/>No Advance charge for security deposit <br/>---if you have any question ,PLEASE INBOX ME---</ul>
+</p>
+</div>
+
+<button class="accordion">(2)What you will get...</button>
+<div class="panel">
+  <p><ul>.jpg,.png,.pdf,.psd,.tiff,.ppt Source File<br/>Unique and Creative Concept<br/>On time delivery<br/>3-4 hours emergency delivery<br/>
+Unlimited Revisions<br/> 100% Quality with Professional Design<br/>Free 3D Mockup in the time of Delivery<br/>---SO WHAT ARE YOU WAITING FOR ? Let us work!---</ul></p>
+</div>
+
+<button class="accordion">(3)My Profile...</button>
+<div class="panel">
+  <p style="float:right; "><a href="cv.jpg" style="text-decoration:none;"download="my cv"><font color="white">Please Check Out my CV</font></a></p>
+<p style="float:left; "><a href="gl.jpg" style="text-decoration:none;"download="my cv"><font color="white">Please Check Out my Certificate on Graphic Design</font></a></p><br/>
+<p style="float:left; "><a href="py.jpg" style="text-decoration:none;"download="my cv"><font color="white">Please Check Out my Certificate on Python Programming</font></a></p>
+<br/><p style="float:right; "><a href="jv.jpg" style="text-decoration:none;"download="my cv"><font color="white">Please Check Out my Certificate on Java Programming</font></a></p><br/><br/>
+<p style="float:right; "><a href="https://www.linkedin.com/in/sougata-mukherjee-603143184/" style="text-decoration:none;"download="my cv"><font color="white">Please Check Out my Linkedin Profile</font></a></p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
